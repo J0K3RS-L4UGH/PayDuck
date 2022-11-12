@@ -1,5 +1,10 @@
+import os
+
+directory = input('What directory is the wordlist you want to use located in?: ')
 wordlist = input('What wordlist do you want to use?: ')
-payload = input('Waht do you want the payload to be called?: ')
+payload = input('What do you want the payload to be called?: ')
+
+os.system('cd ' + directory)
 
 with open(payload, 'w') as firstr:
     firstr.write('STRING ')
