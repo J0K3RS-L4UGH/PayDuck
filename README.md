@@ -19,3 +19,12 @@ optional arguments:
   -b BREAK_TIME, --break_time BREAK_TIME
                         The seconds in between typing the words
 ```
+
+This means it has two needed arguments, ```wordlist```, which is where the wordlist which will be used in the payload is stored, and ```payload```, which is where the new payload will be stored.
+
+It also has one optional argument, which is ```--break_time```. This will specify how long the payload will wait for after typing a word, and the automatic break time is 0.5 seconds.
+
+Example:
+
+If I wanted to use the wordlist ```Wordlist.txt``` which is stored in my home directory, and the payload I want to create will be stored is ```Payload.txt``` (Also stored in my home directory), and I want a break time of 10 seconds, the command would be this:
+```python3 paycreate.py ~/Wordlist.txt ~/Payload.txt --break_time 10```
