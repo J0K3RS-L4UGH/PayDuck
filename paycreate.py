@@ -4,7 +4,7 @@ import argparse
 parser = argparse.ArgumentParser(description='A program to create rubber ducky scripts')
 parser.add_argument("wordlist", help="The wordlist file [i.e. ~/Wordlists/Wordlist.txt]")
 parser.add_argument("payload", help="The file you want the payload to be saved as [i.e. ~/Payloads/Payload.txt]")
-parser.add_argument("-b", "--break_time", help="The seconds in between typing the words", default="0.5")
+parser.add_argument("-b", "--break_time", help="The time in milliseconds between typing the words", default="500")
 
 args = parser.parse_args()
 
