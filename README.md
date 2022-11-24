@@ -26,5 +26,38 @@ It also has one optional argument, which is ```--break_time```. This will specif
 
 Example:
 
-If I wanted to use the wordlist ```Wordlist.txt``` which is stored in my home directory, and the payload I want to create will be stored is ```Payload.txt``` (Also stored in my home directory), and I want a break time of 10 seconds, the command would be this:
+If I wanted to use the wordlist ```Wordlist.txt``` with the contents:
+```
+a
+b
+c
+d
+e
+f
+g
+```
+which is stored in my home directory, and the payload I want to create will be stored is ```Payload.txt``` (Also stored in my home directory), and I want a break time of 10 seconds, the command would be this:
 ```python3 paycreate.py ~/Wordlist.txt ~/Payload.txt --break_time 10```
+
+This will create a file called Payload.txt in my home directory, which containt these contents:
+```
+STRING a
+ENTER
+DELAY 10
+STRING b
+ENTER
+DELAY 10
+STRING c
+ENTER
+DELAY 10
+STRING d
+ENTER
+DELAY 10
+STRING e
+ENTER
+DELAY 10
+STRING f
+ENTER
+DELAY 10
+STRING g
+```
