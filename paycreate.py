@@ -1,17 +1,21 @@
 import os
+import argparse
 
-directory = input('What directory is the wordlist you want to use located in?: ')
-wordlist = input('What wordlist do you want to use?: ')
-payload = input('What do you want the payload to be called?: ')
+parser = argparse.ArgumentParser(description='A program to create rubber ducky scripts')
+parser.add_argument("wordlist", help="The wordlist file [i.e. ~/Wordlists/Wordlist.txt]")
+parser.add_argument("payload", help="The file you want the payload to be saved as [i.e. ~/Payloads/Payload.txt]")
+parser.add_argument("-b", "--break_time", help="The seconds in between typing the words", default="0.5")
 
-os.system('cd ' + directory)
+args = parser.parse_args()
 
-with open(payload, 'w') as firstr:
+
+with open(args.payload, 'w') as firstr:
     firstr.write('STRING ')
 
 
-with open(wordlist) as inf, open(payload, 'a') as outf:
+with open(args.wordlist) as inf, open(args.payload, 'a') as outf:
     outf.write(next(inf))
     for line in inf:
-        outf.write("ENTER\nDELAY 0.5\n")
+        outf.write("ENTER\nDELAY " + args.break_time + "\n")
         outf.write('STRING ' + line)
+
