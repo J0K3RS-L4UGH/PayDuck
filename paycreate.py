@@ -19,3 +19,8 @@ with open(args.wordlist) as inf, open(args.payload, 'a') as outf:
         outf.write("ENTER\nDELAY " + args.break_time + "\n")
         outf.write('STRING ' + line)
 
+finished = input('Your file has been saved to ' + args.payload + '. Would you like to view the contents of it [y/n]?: ')
+if finished == 'y':
+    os.system('cat ' + args.payload)
+else:
+    pass
