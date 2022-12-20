@@ -13,7 +13,7 @@ class bcolors:
 
 args = parser.parse_args()
 
-print(f'''{bcolors.WARNING}
+print(f'''{bcolors.RED}
 
  ██▓███   ▄▄▄     ▓██   ██▓▓█████▄  █    ██  ▄████▄   ██ ▄█▀
 ▓██░  ██▒▒████▄    ▒██  ██▒▒██▀ ██▌ ██  ▓██▒▒██▀ ▀█   ██▄█▒ 
