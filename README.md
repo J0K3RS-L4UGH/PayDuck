@@ -61,3 +61,6 @@ ENTER
 DELAY 10
 STRING g
 ```
+
+Screenshot:
+![image](screenshot.png)
