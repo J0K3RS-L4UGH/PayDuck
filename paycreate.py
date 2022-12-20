@@ -8,7 +8,7 @@ parser.add_argument("payload", help="The file you want the payload to be saved a
 parser.add_argument("-b", "--break_time", help="The time in milliseconds between typing the words", default="500")
 
 class bcolors:
-    WARNING = '\033[93m'
+    RED = '\033[1;31;40m'
     ENDC = '\033[0m'
 
 args = parser.parse_args()
