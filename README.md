@@ -63,4 +63,5 @@ STRING g
 ```
 
 Screenshot:
+
 ![image](screenshot.png)
